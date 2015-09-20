@@ -42,11 +42,13 @@ public class StartUpBean {
      * jdbc:h2:tcp://localhost:9092/~/meetmedb
      * User: sa
      * Pwd: <KEEP EMPTY>
+     *
+     * WARNING: Server is NOT secured. Don't use in production!!!!!
      */
     private void startDbServer() {
         try {
             Server.createTcpServer("-tcpPort", DB_PORT, "-tcpAllowOthers").start();
-            log.info("H2 Server started.");
+            log.warn("WARNING: H2 Server started. Only for testing allowed! Don't start on production system!!!!!");
         } catch (SQLException e) {
             log.error("Could not start db server: " + e);
         }
