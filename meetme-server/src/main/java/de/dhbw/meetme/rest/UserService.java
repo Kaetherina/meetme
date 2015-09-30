@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import java.util.Collection;
+import java.util.List;
 
 /**
  *
@@ -27,17 +28,18 @@ public class UserService {
   @GET
   public Collection<User> list() {
     log.debug("List users");
-    return userDao.list();
+    Collection<User> list =  userDao.list();
+    return list;
   }
 
-  @Path("/get/{id}")
+  @Path("get/{id}")
   @GET
   public User get(@PathParam("id") String id) {
     log.debug("Get user " + id);
     return userDao.get(UuidId.fromString(id));
   }
 
-  @Path("/delete/{id}")
+  @Path("delete/{id}")
   @DELETE
   public void delete(@PathParam("id") String id) {
     log.debug("Delete user " + id);

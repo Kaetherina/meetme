@@ -25,6 +25,10 @@ public class UuidId implements Serializable {
     this.id = UUID.fromString(id).toString();
   }
 
+  public String getId() {
+    return id;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;

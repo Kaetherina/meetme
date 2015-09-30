@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>meetmeserver</artifactId>
+  <artifactId>meetme-server</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>MeetMeServer</name> <!-- Visible name -->
+  <name>MeetMeServer</name> <!-- Visible Maven name -->
 
   <parent>
     <groupId>de.dhbw</groupId>
@@ -68,7 +68,7 @@
   </dependencies>
 
   <build>
-    <finalName>meetmeserver</finalName>
+    <finalName>meetme</finalName>
 
     <plugins>
 
@@ -80,10 +80,6 @@
         <groupId>org.apache.openejb.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
       </plugin>
-      <!--plugin>
-        <groupId>org.wildfly.plugins</groupId>
-        <artifactId>wildfly-maven-plugin</artifactId>
-      </plugin-->
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
