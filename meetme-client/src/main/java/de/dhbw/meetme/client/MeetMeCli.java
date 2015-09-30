@@ -3,7 +3,6 @@ package de.dhbw.meetme.client;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Response;
 
 /**
  *

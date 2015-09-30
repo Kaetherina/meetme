@@ -35,8 +35,10 @@
                 <version>4.0.0-rc.2</version>
                 <configuration>
                     <sdk>
-                        <platform>17</platform>
+                        <platform>21</platform>
                     </sdk>
+                    <androidManifestFile>${project.basedir}/src/main/AndroidManifest.xml</androidManifestFile>
+                    <resourceDirectory>${project.basedir}/src/main/res</resourceDirectory>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                     <undeployBeforeDeploy>true</undeployBeforeDeploy>
                 </configuration>
