@@ -25,6 +25,12 @@
             <version>4.1.1.4</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.google.android.gms</groupId>
+            <artifactId>play-services-maps</artifactId>
+            <type>aar</type>
+            <version>8.1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

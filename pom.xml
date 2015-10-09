@@ -19,6 +19,16 @@
         <h2version>1.4.188</h2version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>com.google.android.support</id>
+            <url>file://${android.sdk.path}/extras/android/m2repository</url>
+        </repository>
+        <repository>
+            <id>com.google.android.google</id>
+            <url>file://${android.sdk.path}/extras/google/m2repository</url>
+        </repository>
+    </repositories>
 
     <!-- declarations for the projects -->
     <dependencyManagement>
