@@ -1,5 +1,6 @@
 package de.dhbw.meetme.rest;
 
+import de.dhbw.meetme.database.Transaction;
 import de.dhbw.meetme.database.dao.UserDao;
 import de.dhbw.meetme.domain.User;
 import de.dhbw.meetme.domain.UuidId;
@@ -10,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import java.util.Collection;
-import java.util.List;
 
 /**
  *
@@ -23,34 +23,45 @@ public class UserService {
 
   @Inject
   UserDao userDao;
+  @Inject
+  Transaction transaction;
 
   @Path("/list")
   @GET
   public Collection<User> list() {
     log.debug("List users");
-    Collection<User> list =  userDao.list();
-    return list;
+    transaction.begin();
+    Collection<User> users = userDao.list();
+    transaction.commit();
+    return users;
   }
 
-  @Path("get/{id}")
+  @Path("/get/{id}")
   @GET
   public User get(@PathParam("id") String id) {
     log.debug("Get user " + id);
-    return userDao.get(UuidId.fromString(id));
+    transaction.begin();
+    User user = userDao.get(UuidId.fromString(id));
+    transaction.commit();
+    return user;
   }
 
-  @Path("delete/{id}")
+  @Path("/delete/{id}")
   @DELETE
   public void delete(@PathParam("id") String id) {
     log.debug("Delete user " + id);
+    transaction.begin();
     userDao.delete(UuidId.fromString(id));
+    transaction.commit();
   }
 
   @Path("/save")
   @PUT
   public void save(@PathParam("user") User user) {
-    userDao.persist(user);
     log.debug("Save user " + user);
+    transaction.begin();
+    userDao.persist(user);
+    transaction.commit();
   }
 
 }

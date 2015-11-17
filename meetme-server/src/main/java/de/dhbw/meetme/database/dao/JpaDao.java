@@ -29,7 +29,7 @@ public abstract class JpaDao<ID extends UuidId, TYPE extends PersistentObject> i
     try {
       TYPE entity = get(id);
       entityManager.remove(entity);
-    } catch (Exception e) {
+    } catch (Exception e) { // convert checked exception into runtime exception
       throw new RuntimeException(e);
     }
   }

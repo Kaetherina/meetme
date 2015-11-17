@@ -19,6 +19,16 @@
         <h2version>1.4.188</h2version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>com.google.android.support</id>
+            <url>file://${android.sdk.path}/extras/android/m2repository</url>
+        </repository>
+        <repository>
+            <id>com.google.android.google</id>
+            <url>file://${android.sdk.path}/extras/google/m2repository</url>
+        </repository>
+    </repositories>
 
     <!-- declarations for the projects -->
     <dependencyManagement>
@@ -45,6 +55,11 @@
                 <artifactId>openjpa</artifactId>
                 <version>2.4.0</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-client</artifactId>
+                <version>2.21</version>
             </dependency>
 
             <dependency>

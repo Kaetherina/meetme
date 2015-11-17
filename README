@@ -1,7 +1,13 @@
 DHBW Fallstudie Systemanalyse
+Version 0.1
 Sample Project
 
-Version 0.1
+Project Owner:
+Jörn Schimmelpfeng, Germany
+joern.schimmelpfeng@web.de
+
+
+Setup:
 
 1. copy <ROOT>/proj/settings.xml to <HOME>/.m2
 2. in settings.xml update "android.sdk.path" property to match your Android sdk path
