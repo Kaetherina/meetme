@@ -1,0 +1,1 @@
+// just needed for the Eclipse compiler plugin to work properly... :(

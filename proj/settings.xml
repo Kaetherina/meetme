@@ -1,13 +1,13 @@
 <settings>
     <profiles>
         <profile>
-            <id>meetme-profile</id>
+            <id>SecureIoT-profile</id>
             <properties>
                 <android.sdk.path>/opt/android-sdk-linux/</android.sdk.path>
             </properties>
         </profile>
     </profiles>
     <activeProfiles>
-        <activeProfile>meetme-profile</activeProfile>
+        <activeProfile>SecureIoT-profile</activeProfile>
     </activeProfiles>
 </settings>

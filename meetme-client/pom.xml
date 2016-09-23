@@ -3,18 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>meetme</artifactId>
-        <groupId>de.dhbw</groupId>
+        <artifactId>SecIoT</artifactId>
+        <groupId>hpe.com</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>meetme-client</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>SecureIoT-client</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
@@ -29,7 +34,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>de.dhbw.meetme.client.MeetMeCli</mainClass>
+                            <mainClass>hpe.com.SecureIoT.client.MeetMeCli</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

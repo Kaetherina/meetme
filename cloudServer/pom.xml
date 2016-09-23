@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>cloudServer</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>cloudServer</name> <!-- Visible Maven name -->
+
+  <parent>
+    <groupId>hpe.com</groupId>
+    <version>1.0-SNAPSHOT</version>
+    <artifactId>SecIoT</artifactId>
+  </parent>
+
+
+  <properties>
+    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies> <!-- inherits build information from parent pom declaration -->
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-web-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.1-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.common</groupId>
+      <artifactId>hibernate-commons-annotations</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.spockframework</groupId>
+      <artifactId>spock-core</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>cloudApplication</finalName>
+
+    <plugins>
+
+      <!-- <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin> -->
+
+      <plugin>
+        <groupId>org.apache.openejb.maven</groupId>
+        <artifactId>tomee-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${endorsed.dir}</outputDirectory>
+              <silent>true</silent>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>javax</groupId>
+                  <artifactId>javaee-endorsed-api</artifactId>
+                  <version>7.0</version>
+                  <type>jar</type>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

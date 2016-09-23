@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <artifactId>meetme-app</artifactId>
+    <artifactId>SecureIoT-app</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>apk</packaging>
 
     <parent>
-        <artifactId>meetme</artifactId>
-        <groupId>de.dhbw</groupId>
+        <groupId>hpe.comw</groupId>
         <version>1.0-SNAPSHOT</version>
+        <artifactId>SecIoT</artifactId>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -24,6 +24,11 @@
             <artifactId>android</artifactId>
             <version>4.1.1.4</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>2.1.2</version>
         </dependency>
         <dependency>
             <groupId>com.google.android.gms</groupId>
@@ -45,7 +50,7 @@
                     </sdk>
                     <androidManifestFile>${project.basedir}/src/main/AndroidManifest.xml</androidManifestFile>
                     <resourceDirectory>${project.basedir}/src/main/res</resourceDirectory>
-                    <deleteConflictingFiles>true</deleteConflictingFiles>
+                    <!--<deleteConflictingFiles>true</deleteConflictingFiles>-->
                     <undeployBeforeDeploy>true</undeployBeforeDeploy>
                 </configuration>
                 <extensions>true</extensions>

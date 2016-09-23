@@ -1,0 +1,20 @@
+<persistence version="1.0"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+       http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+
+  <persistence-unit name="cloudDB" transaction-type="JTA">
+    <jta-data-source>java:jboss/datasources/cloudDb</jta-data-source>
+
+    <class>hpe.com.SecIoT.domain.User</class>
+    <class>hpe.com.SecIoT.domain.UuidId</class>
+    <class>hpe.com.SecIoT.domain.PersistentObject</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+    <properties>
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+    </properties>
+
+  </persistence-unit>
+</persistence>
