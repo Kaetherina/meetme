@@ -14,7 +14,7 @@ public class CryptoEngine {
     private static final String identity        = "accounts22@dataprotection.voltage.com";
     private static final String sharedSecret    = "voltage123";
     private static final String format          = "SSN";
-    private static final String trustStorePath  = "../trustStore";
+    private static final String trustStorePath  = "/opt/voltage-simple-api/trustStore/";
     private static final String cachePath       = "../cache";
     // TODO: Check the multi-threading behaviour of these objects, as well as object creation time.
     private static LibraryContext library       = null;
