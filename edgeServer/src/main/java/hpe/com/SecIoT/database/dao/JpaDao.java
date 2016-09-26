@@ -1,7 +1,7 @@
-package de.dhbw.meetme.database.dao;
+package hpe.com.SecIoT.database.dao;
 
-import de.dhbw.meetme.domain.PersistentObject;
-import de.dhbw.meetme.domain.UuidId;
+import hpe.com.SecIoT.domain.PersistentObject;
+import hpe.com.SecIoT.domain.UuidId;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

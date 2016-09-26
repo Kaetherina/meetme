@@ -1,4 +1,4 @@
-package de.dhbw.meetme.database.dao;
+package hpe.com.SecIoT.database.dao;
 
 import java.util.Collection;
 

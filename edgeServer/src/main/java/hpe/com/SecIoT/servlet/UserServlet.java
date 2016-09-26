@@ -1,8 +1,8 @@
-package de.dhbw.meetme.servlet;
+package hpe.com.SecIoT.servlet;
 
-import de.dhbw.meetme.database.Transaction;
-import de.dhbw.meetme.database.dao.UserDao;
-import de.dhbw.meetme.domain.User;
+import hpe.com.SecIoT.database.Transaction;
+import hpe.com.SecIoT.database.dao.UserDao;
+import hpe.com.SecIoT.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

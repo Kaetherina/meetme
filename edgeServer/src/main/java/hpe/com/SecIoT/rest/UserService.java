@@ -1,9 +1,9 @@
-package de.dhbw.meetme.rest;
+package hpe.com.SecIoT.rest;
 
-import de.dhbw.meetme.database.Transaction;
-import de.dhbw.meetme.database.dao.UserDao;
-import de.dhbw.meetme.domain.User;
-import de.dhbw.meetme.domain.UuidId;
+import hpe.com.SecIoT.database.Transaction;
+import hpe.com.SecIoT.database.dao.UserDao;
+import hpe.com.SecIoT.domain.User;
+import hpe.com.SecIoT.domain.UuidId;
 import groovy.lang.Singleton;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,12 +55,14 @@ public class UserService {
     transaction.commit();
   }
 
-  @Path("/save")
+  @Path("/save/{name}")
   @PUT
-  public void save(@PathParam("user") User user) {
-    log.debug("Save user " + user);
+  public void save(@PathParam("name") String name) {
+    log.debug("Save user " + name);
+    User newUser = new User();
+    newUser.setName(name);
     transaction.begin();
-    userDao.persist(user);
+    userDao.persist(newUser);
     transaction.commit();
   }
 

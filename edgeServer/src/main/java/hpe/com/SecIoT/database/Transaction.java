@@ -1,4 +1,4 @@
-package de.dhbw.meetme.database;
+package hpe.com.SecIoT.database;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,7 +1,7 @@
-package de.dhbw.meetme.database.dao;
+package hpe.com.SecIoT.database.dao;
 
-import de.dhbw.meetme.domain.User;
-import de.dhbw.meetme.domain.UuidId;
+import hpe.com.SecIoT.domain.User;
+import hpe.com.SecIoT.domain.UuidId;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.Query;
@@ -24,10 +24,12 @@ public class UserDao extends JpaDao<UuidId, User> {
         super(User.class);
     }
 
+    /*
     @SuppressWarnings("unchecked")
     Collection<User> findByName(String name) {
         Query query = entityManager.createQuery("from User u where u.name = :name");
         query.setParameter("name", name);
         return (Collection<User>) query.getResultList();
     }
+    */
 }

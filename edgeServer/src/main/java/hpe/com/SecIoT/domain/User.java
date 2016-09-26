@@ -1,4 +1,4 @@
-package de.dhbw.meetme.domain;
+package hpe.com.SecIoT.domain;
 
 
 import javax.persistence.Entity;

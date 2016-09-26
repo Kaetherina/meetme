@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <tomee>
-  <Resource id="meetmeDb" type="DataSource">
+  <Resource id="cloudDB" type="DataSource">
     JdbcDriver org.h2.Driver
-    JdbcUrl jdbc:h2:~/meetmedb;DB_CLOSE_DELAY=-1;
+    JdbcUrl jdbc:h2:~/cloudDB;DB_CLOSE_DELAY=-1;
     UserName sa
-    Password
+    Password 
     JtaManaged true
   </Resource>
 </tomee>

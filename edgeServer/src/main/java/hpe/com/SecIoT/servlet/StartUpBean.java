@@ -1,6 +1,6 @@
-package de.dhbw.meetme.servlet;
+package hpe.com.SecIoT.servlet;
 
-import de.dhbw.meetme.database.dao.UserDao;
+import hpe.com.SecIoT.database.dao.UserDao;
 import org.h2.tools.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ import java.sql.SQLException;
 @Startup
 public class StartUpBean {
     private static final Logger log = LoggerFactory.getLogger(StartUpBean.class);
-    public static final String DB_PORT = "9092";
+    public static final String DB_PORT = "9093";
 
     @Inject
     UserDao userDao;

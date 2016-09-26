@@ -19,7 +19,7 @@
         <h2version>1.4.188</h2version>
     </properties>
 
-    <repositories>
+    <!--repositories>
         <repository>
             <id>com.google.android.support</id>
             <url>file://${android.sdk.path}/extras/android/m2repository</url>
@@ -28,7 +28,7 @@
             <id>com.google.android.google</id>
             <url>file://${android.sdk.path}/extras/google/m2repository</url>
         </repository>
-    </repositories>
+    </repositories-->
 
     <!-- declarations for the projects -->
     <dependencyManagement>
@@ -199,11 +199,9 @@
     </build>
 
     <modules>
-        <module>meetmeserver</module>
-        <module>meetme-app</module>
-        <module>meetme-client</module>
         <module>cloudServer</module>
         <module>edgeServer</module>
+        <module>SecureIoT-client</module>
     </modules>
 
 </project>
