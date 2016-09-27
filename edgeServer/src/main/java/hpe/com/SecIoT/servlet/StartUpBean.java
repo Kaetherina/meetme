@@ -26,7 +26,7 @@ public class StartUpBean {
 
     @PostConstruct
     public void init() {
-        log.info("MeetMe Server started.");
+        log.info("EdgeServer started.");
         // inital code goes here
         startDbServer();
     }

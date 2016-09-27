@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <h1>enter the text you want to encrap</h1>
+  <h1>enter the text you want to encrypt</h1>
 
   <form action="test"> <!-- this is how we connect to our TestServlet-->
     <input name="q" />

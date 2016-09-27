@@ -19,7 +19,11 @@ public class TestServlet extends HttpServlet{
     private static final long serialVersionUID = 1L;
     private CryptoEngine engine = new CryptoEngine();
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+
+        System.out.println("get method is being executed");
+
         String plainText = request.getParameter("q");
         response.setContentType("text/plain");
         try(PrintWriter pw = new PrintWriter(response.getWriter())){
@@ -34,9 +38,23 @@ public class TestServlet extends HttpServlet{
             String oldPlain = engine.decrypt(cipherText);
             pw.println("here goes the old plaintext: " + oldPlain);
         }
+
+        response.setContentType("text/html");
+        response.setBufferSize(8192);
+        try (PrintWriter out = response.getWriter()) {
+            out.println("<html lang=\"en\"><head><title>Servlet Hello</title></head>");
+
+            // then write the data of the response
+            out.println("<body  bgcolor=\"#ffffff\">"
+                    + "<h2>found the website!</h2>");
+
+            out.println("</body></html>");
+        }
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+
         doGet(request, response);
     }
 }
